@@ -35,6 +35,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
             webDriver.get("https://mail.ru/");
             webDriver.manage().window().setSize(new Dimension(1300, 720));
 
+
             webDriver.findElement(By.xpath("//input[@data-testid='login-input']")).sendKeys("sineglazka.seregina");
             webDriver.findElement(By.xpath("//button[@data-testid=\"enter-password\"]")).click();
             webDriver.findElement(By.name("password")).sendKeys("abcd1979");
@@ -53,7 +54,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
         @Test
         @DisplayName("Писем не найдено")
         void filedFilterSearchTest() throws InterruptedException {
-
             webDriver.get("https://mail.ru/");
             webDriver.manage().window().setSize(new Dimension(1300, 720));
 
